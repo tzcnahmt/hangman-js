@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #202124;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-family: "Amatic SC", cursive;
+    font-size: 3rem;
+    color: #c7c7c7;
+}
+#guess span {
+    letter-spacing: 30px;
+}
+#lives {
+    color: red;
+}
+.hangman-container {
+    width: 100%;
+    padding: 2rem;
+}
+.controller {
+    margin: 0 auto;
+    max-width: 1024px;
+    text-align: center;
+}
+.alphabet {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.alphabet div {
+    font-family: "Amatic SC", cursive;
+    font-weight: bold;
+    color: #c7c7c7;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 41px;
+    width: 44px;
+    border: 1px solid rgb(95, 99, 104);
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.alphabet div:hover:not([disabled]) {
+    cursor: pointer;
+    border-color: white;
+}
+
+#hangman-render {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+#hangman-render svg g path {
+    visibility: hidden;
+}
+
+#buttons {
+    width: 100%;
+    text-align: center;
+}
+#buttons button {
+    width: 150px;
+    height: 50px;
+    border: 1px solid rgb(95, 99, 104);
+    background: transparent;
+    color: #c7c7c7;
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+#buttons button:hover {
+    border-color: white;
+    cursor: pointer;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
