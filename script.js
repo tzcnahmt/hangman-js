@@ -7,6 +7,8 @@ const $lives = document.getElementById("lives")
 const $guess = document.getElementById("guess")
 const $alphabet = document.querySelector(".alphabet")
 const $buttons = document.getElementById("buttons")
+const $startgame = document.querySelector(".startgame")
+
 const alphabets = [
     "A",
     "B",
@@ -42,6 +44,10 @@ audio.volume = 0.1
 let lives = 10
 let correctGuessCounter = 0
 let hangmanCounter = 0
+
+function startGame() {
+    $startgame.style.display = "none"
+}
 
 /**
  * Renders the alphabet from A-Z as button for guesses.
